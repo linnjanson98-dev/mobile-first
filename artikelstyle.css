@@ -40,21 +40,20 @@ ul{
     flex-direction: column;
 }
 
-#artikel1, #artikel2{
-    padding: 4%;
-    border-bottom: 2px solid black;
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid black;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 10px;
 }
 
 img{
-    max-width: 40%;
+    align-self: center;
+    max-width: 60%;
     height: auto;
-}
-
-#artikel1>p, #artikel2>p{
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
 }
 
 footer{
@@ -77,6 +76,8 @@ footer{
 
     #rubriklänkar{
         flex: 1;
+        padding-right: 15px;
+        border-right: 2px solid black;
     }
     
     #rubriklänkar>ul{
@@ -84,21 +85,25 @@ footer{
     }
 
     #artiklar{
-        flex: 3; /* ger dom lite mer plats än länkarna, men inte så mycket som det var av default*/
+        flex: 5; /* ger dom lite mer plats än länkarna, men inte så mycket som det var av default*/
         flex-direction: column;
         gap: 50px;
         border-bottom: 0;
+        text-align: left;
     }
-
-    #artikel1, #artikel2{
-        display: flex;
-        flex-direction: row;
-        align-items: center; 
-        /*Tydligen är stretch default, så ändrar till center så inget blir squished*/
-        gap: 10px;
-        border: 2px solid black;   
-    }
-
     
+    article {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    border: 2px solid black;
+    padding: 20px;
+    gap: 20px;
+    margin-bottom: 0;
+}
+
+    img{
+        max-width: 20%;
+    }
 
 }
